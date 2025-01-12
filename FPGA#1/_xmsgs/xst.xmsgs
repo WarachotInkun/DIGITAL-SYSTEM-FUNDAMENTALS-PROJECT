@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/home/iqnaja/project/pro7/buff.vhd" Line 58: <arg fmt="%s" index="1">rst</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/iqnaja/project/pro7/buff.vhd" Line 56: Assignment to <arg fmt="%s" index="1">prev_vsync</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/iqnaja/project/pro7/top.vhd</arg>&quot; line <arg fmt="%s" index="2">198</arg>: Output port &lt;<arg fmt="%s" index="3">config_finished</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">camera_ctrl</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">frame_mem</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem1</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_frame_mem</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0076</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">frame_buff/rgb565_pixel_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_ctrl/config_finished</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">camera_system</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">frame_buff/y_counter_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">camera_system</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">frame_buff/green_isas_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">camera_system</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frame_buff/rgb565_pixel_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">frame_buff/green_isas_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">camera_system</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frame_buff/rgb565_pixel_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">frame_buff/green_isas_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">camera_system</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frame_buff/rgb565_pixel_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">bus_addr_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">camera_system</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_LPM_FF&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem13</arg>&gt;, &lt;<arg fmt="%s" index="2">frame_buff/Mram_frame_mem16</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem14</arg>&gt;, &lt;<arg fmt="%s" index="2">frame_buff/Mram_frame_mem17</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem15</arg>&gt;, &lt;<arg fmt="%s" index="2">frame_buff/Mram_frame_mem18</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem5</arg>&gt;, &lt;<arg fmt="%s" index="2">frame_buff/Mram_frame_mem8</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem3</arg>&gt;, &lt;<arg fmt="%s" index="2">frame_buff/Mram_frame_mem6</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">frame_buff/Mram_frame_mem4</arg>&gt;, &lt;<arg fmt="%s" index="2">frame_buff/Mram_frame_mem7</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+</messages>
+

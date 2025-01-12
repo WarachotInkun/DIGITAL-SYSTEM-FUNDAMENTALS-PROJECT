@@ -1,0 +1,98 @@
+
+
+
+
+
+# Clock signal (20MHz)
+NET "clk"            LOC = "P123" | IOSTANDARD = LVCMOS33;
+NET "btn"            LOC = "P47" ;
+NET "btn" CLOCK_DEDICATED_ROUTE = FALSE; 
+
+
+
+
+# Reset button
+NET "rst"            LOC = "P101" | IOSTANDARD = LVCMOS33 ;
+NET "rst" CLOCK_DEDICATED_ROUTE = FALSE; 
+NET "del"            LOC = "P102" | IOSTANDARD = LVCMOS33 ;
+NET "save"            LOC = "P104" | IOSTANDARD = LVCMOS33 ;
+
+PIN "clk_25mhz_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE; 
+PIN "clk_50mhz_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE; 
+
+# OV7670 Camera Interface
+NET "cam_pclk"       LOC = "P131" | IOSTANDARD = LVCMOS33;  # Pixel Clock
+NET "cam_vsync"      LOC = "P133" | IOSTANDARD = LVCMOS33;  # Vertical Sync
+NET "cam_href"       LOC = "P137" | IOSTANDARD = LVCMOS33;  # Horizontal Reference
+NET "cam_xclk"       LOC = "P126" | IOSTANDARD = LVCMOS33;  # System Clock to Camera
+NET "cam_sioc"       LOC = "P141" | IOSTANDARD = LVCMOS33;  # SCCB Clock
+NET "cam_siod"       LOC = "P139" | IOSTANDARD = LVCMOS33;  # SCCB Data
+NET "cam_reset"      LOC = "P2" | IOSTANDARD = LVCMOS33;  # Camera Reset
+NET "cam_pwdn"       LOC = "P143" | IOSTANDARD = LVCMOS33;  # Power Down Mode
+
+# Camera Data Bus
+NET "cam_data<0>"    LOC = "P24" | IOSTANDARD = LVCMOS33;
+NET "cam_data<1>"    LOC = "P22" | IOSTANDARD = LVCMOS33;
+NET "cam_data<2>"    LOC = "P15" | IOSTANDARD = LVCMOS33;
+NET "cam_data<3>"    LOC = "P17" | IOSTANDARD = LVCMOS33;
+NET "cam_data<4>"    LOC = "P10" | IOSTANDARD = LVCMOS33;
+NET "cam_data<5>"    LOC = "P12" | IOSTANDARD = LVCMOS33;
+NET "cam_data<6>"    LOC = "P6" | IOSTANDARD = LVCMOS33;
+NET "cam_data<7>"    LOC = "P8" | IOSTANDARD = LVCMOS33;
+
+# VGA Output
+NET "vga_r<0>"       LOC = "P132"   | IOSTANDARD = LVCMOS33;  # Red[0]
+NET "vga_r<1>"       LOC = "P127"   | IOSTANDARD = LVCMOS33;  # Red[1]
+NET "vga_r<2>"       LOC = "P124"   | IOSTANDARD = LVCMOS33;  # Red[2]
+NET "vga_g<0>"       LOC = "P140"   | IOSTANDARD = LVCMOS33;  # Green[0]
+NET "vga_g<1>"       LOC = "P138"   | IOSTANDARD = LVCMOS33;  # Green[1]
+NET "vga_g<2>"       LOC = "P134"   | IOSTANDARD = LVCMOS33;  # Green[2]
+NET "vga_b<0>"       LOC = "P1"   | IOSTANDARD = LVCMOS33;  # Blue[0]
+NET "vga_b<1>"       LOC = "P142"   | IOSTANDARD = LVCMOS33;  # Blue[1]
+#NET "vga_b<2>"       LOC = "P119"   | IOSTANDARD = LVCMOS33;  # Blue[1]
+NET "vga_hsync"      LOC = "P21"  | IOSTANDARD = LVCMOS33;  # Horizontal Sync
+NET "vga_vsync"      LOC = "P23"  | IOSTANDARD = LVCMOS33;  # Vertical Sync
+
+
+
+
+
+
+	
+		  
+		  
+NET "o_bus_data(0)"      LOC = "P121"  | IOSTANDARD = LVCMOS33;  
+NET "o_bus_data(1)"      LOC = "P120"  | IOSTANDARD = LVCMOS33;  
+NET "o_bus_data(2)"      LOC = "P119"  | IOSTANDARD = LVCMOS33;  
+NET "o_bus_data(3)"      LOC = "P118"  | IOSTANDARD = LVCMOS33;  
+NET "o_bus_data(4)"      LOC = "P117"  | IOSTANDARD = LVCMOS33;  
+NET "o_bus_data(5)"      LOC = "P116"  | IOSTANDARD = LVCMOS33;  
+NET "o_bus_data(6)"      LOC = "P115"  | IOSTANDARD = LVCMOS33;
+NET "o_bus_data(7)"      LOC = "P114"  | IOSTANDARD = LVCMOS33;
+
+
+  		  
+NET "o_bus_clk"      LOC = "P99"  | IOSTANDARD = LVCMOS33;  # Vertical Sync
+NET "o_led"      LOC = "P82"  | IOSTANDARD = LVCMOS33;  # Vertical Sync
+NET "o_tig"      LOC = "P100"  | IOSTANDARD = LVCMOS33;  # Vertical Sync
+## Timing Constraints
+#TIMESPEC "TS_CLK" = PERIOD "clk" 50 ns HIGH 50%;
+#NET "clk" TNM_NET = "clk";
+#
+## Clock Group Definitions
+#NET "cam_pclk" TNM_NET = "cam_pclk";
+#NET "clk_25mhz" TNM_NET = "clk_25mhz";
+#
+## Define clock groups to prevent timing analysis between unrelated clocks
+#TIMEGROUP "cam_grp" = "cam_pclk";
+#TIMEGROUP "vga_grp" = "clk_25mhz";
+#TIMEGROUP "sys_grp" = "clk";
+#
+## Declare asynchronous clock groups
+#TIMING IGNORE PATHS FROM TIMEGRP "cam_grp" TO TIMEGRP "vga_grp";
+#TIMING IGNORE PATHS FROM TIMEGRP "vga_grp" TO TIMEGRP "cam_grp";
+#
+## Area Constraints (optional)
+#AREA_GROUP "camera_ctrl" RANGE = SLICE_X0Y0:SLICE_X10Y10;
+#AREA_GROUP "frame_buff" RANGE = SLICE_X12Y0:SLICE_X30Y30;
+#AREA_GROUP "vga_ctrl" RANGE = SLICE_X32Y0:SLICE_X40Y10;

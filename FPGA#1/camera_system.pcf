@@ -1,0 +1,57 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 12 16:01:25 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "del" LOCATE = SITE "P102" LEVEL 1;
+COMP "clk" LOCATE = SITE "P123" LEVEL 1;
+COMP "btn" LOCATE = SITE "P47" LEVEL 1;
+PIN btn_pin<0> = BEL "btn" PINNAME PAD;
+PIN "btn_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "rst" LOCATE = SITE "P101" LEVEL 1;
+PIN rst_pin<0> = BEL "rst" PINNAME PAD;
+PIN "rst_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "cam_reset" LOCATE = SITE "P2" LEVEL 1;
+COMP "cam_vsync" LOCATE = SITE "P133" LEVEL 1;
+COMP "save" LOCATE = SITE "P104" LEVEL 1;
+COMP "o_bus_data<0>" LOCATE = SITE "P121" LEVEL 1;
+COMP "o_bus_data<1>" LOCATE = SITE "P120" LEVEL 1;
+COMP "o_bus_data<2>" LOCATE = SITE "P119" LEVEL 1;
+COMP "o_bus_data<3>" LOCATE = SITE "P118" LEVEL 1;
+COMP "o_bus_data<4>" LOCATE = SITE "P117" LEVEL 1;
+COMP "o_bus_data<5>" LOCATE = SITE "P116" LEVEL 1;
+COMP "o_bus_data<6>" LOCATE = SITE "P115" LEVEL 1;
+COMP "o_bus_data<7>" LOCATE = SITE "P114" LEVEL 1;
+COMP "o_led" LOCATE = SITE "P82" LEVEL 1;
+COMP "o_tig" LOCATE = SITE "P100" LEVEL 1;
+COMP "cam_data<0>" LOCATE = SITE "P24" LEVEL 1;
+COMP "cam_data<1>" LOCATE = SITE "P22" LEVEL 1;
+COMP "cam_data<2>" LOCATE = SITE "P15" LEVEL 1;
+COMP "cam_data<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "cam_data<4>" LOCATE = SITE "P10" LEVEL 1;
+COMP "cam_data<5>" LOCATE = SITE "P12" LEVEL 1;
+COMP "cam_data<6>" LOCATE = SITE "P6" LEVEL 1;
+COMP "cam_data<7>" LOCATE = SITE "P8" LEVEL 1;
+COMP "o_bus_clk" LOCATE = SITE "P99" LEVEL 1;
+COMP "cam_href" LOCATE = SITE "P137" LEVEL 1;
+COMP "cam_pclk" LOCATE = SITE "P131" LEVEL 1;
+COMP "cam_sioc" LOCATE = SITE "P141" LEVEL 1;
+COMP "cam_siod" LOCATE = SITE "P139" LEVEL 1;
+COMP "cam_xclk" LOCATE = SITE "P126" LEVEL 1;
+COMP "cam_pwdn" LOCATE = SITE "P143" LEVEL 1;
+COMP "vga_hsync" LOCATE = SITE "P21" LEVEL 1;
+COMP "vga_vsync" LOCATE = SITE "P23" LEVEL 1;
+COMP "vga_b<0>" LOCATE = SITE "P1" LEVEL 1;
+COMP "vga_b<1>" LOCATE = SITE "P142" LEVEL 1;
+COMP "vga_g<0>" LOCATE = SITE "P140" LEVEL 1;
+COMP "vga_g<1>" LOCATE = SITE "P138" LEVEL 1;
+COMP "vga_g<2>" LOCATE = SITE "P134" LEVEL 1;
+COMP "vga_r<0>" LOCATE = SITE "P132" LEVEL 1;
+COMP "vga_r<1>" LOCATE = SITE "P127" LEVEL 1;
+COMP "vga_r<2>" LOCATE = SITE "P124" LEVEL 1;
+PIN clk_25mhz_BUFG_pin<1> = BEL "clk_25mhz_BUFG" PINNAME O;
+PIN "clk_25mhz_BUFG_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN clk_50mhz_BUFG_pin<1> = BEL "clk_50mhz_BUFG" PINNAME O;
+PIN "clk_50mhz_BUFG_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+SCHEMATIC END;
+

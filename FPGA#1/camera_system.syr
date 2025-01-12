@@ -1,0 +1,1007 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: camera_system.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "camera_system.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "camera_system"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : camera_system
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/iqnaja/project/pro7/vga.vhd" into library work
+Parsing entity <vga_display>.
+Parsing architecture <Behavioral> of entity <vga_display>.
+Parsing VHDL file "/home/iqnaja/project/pro7/ClockAdjust.vhdl" into library work
+Parsing entity <dcm_clock>.
+Parsing architecture <BEHAVIORAL> of entity <dcm_clock>.
+Parsing VHDL file "/home/iqnaja/project/pro7/camera.vhd" into library work
+Parsing entity <ov7670_controller>.
+Parsing architecture <Behavioral> of entity <ov7670_controller>.
+Parsing VHDL file "/home/iqnaja/project/pro7/buff.vhd" into library work
+Parsing entity <frame_buffer>.
+Parsing architecture <Behavioral> of entity <frame_buffer>.
+Parsing VHDL file "/home/iqnaja/project/pro7/top.vhd" into library work
+Parsing entity <camera_system>.
+Parsing architecture <Behavioral> of entity <camera_system>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <camera_system> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dcm_clock> (architecture <BEHAVIORAL>) with generics from library <work>.
+
+Elaborating entity <dcm_clock> (architecture <BEHAVIORAL>) with generics from library <work>.
+
+Elaborating entity <ov7670_controller> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <frame_buffer> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/iqnaja/project/pro7/buff.vhd" Line 58: rst should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "/home/iqnaja/project/pro7/buff.vhd" Line 56: Assignment to prev_vsync ignored, since the identifier is never used
+
+Elaborating entity <vga_display> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <camera_system>.
+    Related source file is "/home/iqnaja/project/pro7/top.vhd".
+INFO:Xst:3210 - "/home/iqnaja/project/pro7/top.vhd" line 198: Output port <config_finished> of the instance <camera_ctrl> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <clk_200khz>.
+    Found 1-bit register for signal <rst_prev>.
+    Found 1-bit register for signal <del_prev>.
+    Found 1-bit register for signal <rst_toggle>.
+    Found 1-bit register for signal <p_t>.
+    Found 1-bit register for signal <save_prev>.
+    Found 1-bit register for signal <s_t>.
+    Found 1-bit register for signal <save_toggle>.
+    Found 1-bit register for signal <start>.
+    Found 15-bit register for signal <bus_addr>.
+    Found 8-bit register for signal <o_bus_data>.
+    Found 15-bit register for signal <index>.
+    Found 1-bit register for signal <timer_enable>.
+    Found 19-bit register for signal <timer_count>.
+    Found 7-bit register for signal <counter>.
+    Found 7-bit adder for signal <counter[6]_GND_4_o_add_0_OUT> created at line 82.
+    Found 15-bit adder for signal <index[14]_GND_4_o_add_8_OUT> created at line 141.
+    Found 19-bit adder for signal <timer_count[18]_GND_4_o_add_12_OUT> created at line 153.
+    Found 19-bit comparator lessequal for signal <timer_count[18]_PWR_4_o_LessThan_12_o> created at line 152
+    Found 15-bit comparator greater for signal <index[14]_PWR_4_o_LessThan_8_o> created at line 170
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <camera_system> synthesized.
+
+Synthesizing Unit <dcm_clock_1>.
+    Related source file is "/home/iqnaja/project/pro7/ClockAdjust.vhdl".
+        CLKFX_MULTIPLY = 5
+        CLKFX_DIVIDE = 4
+    Summary:
+	no macro.
+Unit <dcm_clock_1> synthesized.
+
+Synthesizing Unit <dcm_clock_2>.
+    Related source file is "/home/iqnaja/project/pro7/ClockAdjust.vhdl".
+        CLKFX_MULTIPLY = 97
+        CLKFX_DIVIDE = 40
+    Summary:
+	no macro.
+Unit <dcm_clock_2> synthesized.
+
+Synthesizing Unit <ov7670_controller>.
+    Related source file is "/home/iqnaja/project/pro7/camera.vhd".
+    Found 32-bit register for signal <reg_index>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <sioc>.
+    Found 1-bit register for signal <state[2]_clk_DFF_64_q>.
+    Found 1-bit register for signal <config_finished>.
+    Found 1-bit register for signal <state[2]_clk_DFF_98>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <reg_index[31]_GND_8_o_add_4_OUT> created at line 90.
+    Found 8x2-bit Read Only RAM for signal <_n0076>
+    Found 1-bit tristate buffer for signal <siod> created at line 50
+    Found 32-bit comparator greater for signal <GND_8_o_reg_index[31]_LessThan_1_o> created at line 64
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <ov7670_controller> synthesized.
+
+Synthesizing Unit <frame_buffer>.
+    Related source file is "/home/iqnaja/project/pro7/buff.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <x_counter>.
+    Found 10-bit register for signal <y_counter>.
+    Found 15-bit register for signal <write_addr>.
+    Found 1-bit register for signal <byte_count>.
+    Found 16-bit register for signal <rgb565_pixel>.
+    Found 3-bit register for signal <green_isas>.
+    Found 8-bit register for signal <vga_data>.
+    Found 8-bit register for signal <bus_data>.
+    Found 15-bit adder for signal <write_addr[14]_GND_14_o_add_4_OUT> created at line 1241.
+    Found 10-bit adder for signal <y_counter[9]_GND_14_o_add_9_OUT> created at line 1241.
+    Found 10-bit adder for signal <x_counter[9]_GND_14_o_add_11_OUT> created at line 1241.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <frame_mem>, simulation mismatch.
+    Found 19200x8-bit dual-port RAM <Mram_frame_mem> for signal <frame_mem>.
+    Found 15-bit comparator lessequal for signal <write_addr[14]_PWR_12_o_LessThan_4_o> created at line 93
+    Found 10-bit comparator lessequal for signal <y_counter[9]_GND_14_o_LessThan_9_o> created at line 101
+    Summary:
+	inferred   2 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  71 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <frame_buffer> synthesized.
+
+Synthesizing Unit <vga_display>.
+    Related source file is "/home/iqnaja/project/pro7/vga.vhd".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <v_count>.
+    Found 1-bit register for signal <vga_hsync>.
+    Found 1-bit register for signal <vga_vsync>.
+    Found 3-bit register for signal <vga_r>.
+    Found 3-bit register for signal <vga_g>.
+    Found 2-bit register for signal <vga_b>.
+    Found 10-bit register for signal <h_count>.
+    Found 10-bit adder for signal <v_count[9]_GND_15_o_add_2_OUT> created at line 62.
+    Found 10-bit adder for signal <h_count[9]_GND_15_o_add_4_OUT> created at line 65.
+    Found 15-bit adder for signal <y_pos[6]_GND_15_o_add_20_OUT> created at line 97.
+    Found 7x8-bit multiplier for signal <n0059> created at line 97.
+    Found 10-bit comparator lessequal for signal <n0009> created at line 75
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_13_o_LessThan_11_o> created at line 76
+    Found 10-bit comparator lessequal for signal <n0014> created at line 83
+    Found 10-bit comparator greater for signal <v_count[9]_GND_15_o_LessThan_13_o> created at line 84
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_13_o_LessThan_14_o> created at line 93
+    Found 10-bit comparator greater for signal <v_count[9]_GND_15_o_LessThan_16_o> created at line 94
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <vga_display> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 19200x8-bit dual-port RAM                             : 2
+ 8x2-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 8x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 10
+ 10-bit adder                                          : 4
+ 15-bit adder                                          : 3
+ 19-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 7-bit adder                                           : 1
+# Registers                                            : 35
+ 1-bit register                                        : 17
+ 10-bit register                                       : 4
+ 15-bit register                                       : 3
+ 16-bit register                                       : 1
+ 19-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 3
+ 32-bit register                                       : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 11
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 3
+ 15-bit comparator greater                             : 1
+ 15-bit comparator lessequal                           : 1
+ 19-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 19
+ 1-bit 2-to-1 multiplexer                              : 10
+ 10-bit 2-to-1 multiplexer                             : 3
+ 15-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <camera_system>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <index>: 1 register on signal <index>.
+The following registers are absorbed into counter <timer_count>: 1 register on signal <timer_count>.
+INFO:Xst:3226 - The RAM <frame_buff/Mram_frame_mem1> will be implemented as a BLOCK RAM, absorbing the following register(s): <bus_addr> <frame_buff/bus_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 19200-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <cam_pclk>      | rise     |
+    |     weA            | connected to signal <frame_buff/GND_14_o_x_counter[1]_MUX_193_o_0_1> | high     |
+    |     addrA          | connected to signal <frame_buff/write_addr> |          |
+    |     diA            | connected to signal <(frame_buff/rgb565_pixel<15:13>,frame_buff/green_isas,cam_data<4:3>)> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 19200-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_200khz>    | rise     |
+    |     addrB          | connected to signal <index>         |          |
+    |     doB            | connected to signal <bus_data>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <camera_system> synthesized (advanced).
+
+Synthesizing (advanced) Unit <frame_buffer>.
+The following registers are absorbed into counter <y_counter>: 1 register on signal <y_counter>.
+The following registers are absorbed into counter <write_addr>: 1 register on signal <write_addr>.
+INFO:Xst:3226 - The RAM <Mram_frame_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <vga_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 19200-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <cam_pclk>      | rise     |
+    |     weA            | connected to signal <GND_14_o_x_counter[1]_MUX_193_o_0_0> | high     |
+    |     addrA          | connected to signal <write_addr>    |          |
+    |     diA            | connected to signal <(rgb565_pixel<15:13>,green_isas,cam_data<4:3>)> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 19200-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <vga_clk>       | rise     |
+    |     addrB          | connected to signal <vga_addr>      |          |
+    |     doB            | connected to signal <vga_data>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <frame_buffer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ov7670_controller>.
+The following registers are absorbed into counter <reg_index>: 1 register on signal <reg_index>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0076> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <reg_index<2:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ov7670_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_display>.
+The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
+The following registers are absorbed into counter <v_count>: 1 register on signal <v_count>.
+	Multiplier <Mmult_n0059> in block <vga_display> and adder/subtractor <Madd_y_pos[6]_GND_15_o_add_20_OUT> in block <vga_display> are combined into a MAC<Maddsub_n0059>.
+Unit <vga_display> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 19200x8-bit dual-port block RAM                       : 2
+ 8x2-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 8x7-to-15-bit MAC                                     : 1
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Counters                                             : 8
+ 10-bit up counter                                     : 3
+ 15-bit up counter                                     : 2
+ 19-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 77
+ Flip-Flops                                            : 77
+# Comparators                                          : 11
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 3
+ 15-bit comparator greater                             : 1
+ 15-bit comparator lessequal                           : 1
+ 19-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 8
+ 10-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <camera_ctrl/FSM_0> on signal <state[1:3]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idle      | 000
+ start     | 001
+ send_addr | 010
+ send_data | 011
+ stop      | 100
+-----------------------
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_0> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_1> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_2> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_3> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_4> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_5> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_6> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_7> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_8> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_9> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_10> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_11> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <frame_buff/rgb565_pixel_12> of sequential type is unconnected in block <camera_system>.
+WARNING:Xst:2677 - Node <camera_ctrl/config_finished> of sequential type is unconnected in block <camera_system>.
+
+Optimizing unit <camera_system> ...
+
+Optimizing unit <vga_display> ...
+WARNING:Xst:1293 - FF/Latch <frame_buff/y_counter_9> has a constant value of 0 in block <camera_system>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <frame_buff/green_isas_0> in Unit <camera_system> is equivalent to the following FF/Latch, which will be removed : <frame_buff/rgb565_pixel_13> 
+INFO:Xst:2261 - The FF/Latch <frame_buff/green_isas_1> in Unit <camera_system> is equivalent to the following FF/Latch, which will be removed : <frame_buff/rgb565_pixel_14> 
+INFO:Xst:2261 - The FF/Latch <frame_buff/green_isas_2> in Unit <camera_system> is equivalent to the following FF/Latch, which will be removed : <frame_buff/rgb565_pixel_15> 
+INFO:Xst:2261 - The FF/Latch <bus_addr_14> in Unit <camera_system> is equivalent to the following FF/Latch, which will be removed : <inst_LPM_FF> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2399 - RAMs <frame_buff/Mram_frame_mem13>, <frame_buff/Mram_frame_mem16> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <frame_buff/Mram_frame_mem14>, <frame_buff/Mram_frame_mem17> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <frame_buff/Mram_frame_mem15>, <frame_buff/Mram_frame_mem18> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <frame_buff/Mram_frame_mem5>, <frame_buff/Mram_frame_mem8> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <frame_buff/Mram_frame_mem3>, <frame_buff/Mram_frame_mem6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <frame_buff/Mram_frame_mem4>, <frame_buff/Mram_frame_mem7> are equivalent, second RAM is removed
+Found area constraint ratio of 100 (+ 5) on block camera_system, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 182
+ Flip-Flops                                            : 182
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : camera_system.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 486
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 82
+#      LUT2                        : 30
+#      LUT3                        : 53
+#      LUT4                        : 33
+#      LUT5                        : 24
+#      LUT6                        : 33
+#      MUXCY                       : 110
+#      VCC                         : 1
+#      XORCY                       : 110
+# FlipFlops/Latches                : 182
+#      FD                          : 11
+#      FDC                         : 5
+#      FDCE                        : 67
+#      FDE                         : 18
+#      FDP                         : 1
+#      FDR                         : 28
+#      FDRE                        : 52
+# RAMS                             : 14
+#      RAMB16BWER                  : 14
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 37
+#      IBUF                        : 10
+#      IBUFG                       : 1
+#      OBUF                        : 25
+#      OBUFT                       : 1
+# DCMs                             : 2
+#      DCM_CLKGEN                  : 2
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             182  out of  11440     1%  
+ Number of Slice LUTs:                  264  out of   5720     4%  
+    Number used as Logic:               264  out of   5720     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    300
+   Number with an unused Flip Flop:     118  out of    300    39%  
+   Number with an unused LUT:            36  out of    300    12%  
+   Number of fully used LUT-FF pairs:   146  out of    300    48%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  38  out of    102    37%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               14  out of     32    43%  
+    Number using Block RAM only:         14
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUFG                  | 12    |
+cam_pclk                           | BUFGP                  | 52    |
+clk_200khz                         | BUFG                   | 70    |
+clk_25mhz                          | BUFG                   | 38    |
+clk_50mhz                          | BUFG                   | 38    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.949ns (Maximum Frequency: 111.742MHz)
+   Minimum input arrival time before clock: 6.503ns
+   Maximum output required time after clock: 7.766ns
+   Maximum combinational path delay: 2.130ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cam_pclk'
+  Clock period: 5.478ns (frequency: 182.533MHz)
+  Total number of paths / destination ports: 1258 / 334
+-------------------------------------------------------------------------
+Delay:               5.478ns (Levels of Logic = 3)
+  Source:            frame_buff/write_addr_6 (FF)
+  Destination:       frame_buff/write_addr_0 (FF)
+  Source Clock:      cam_pclk rising
+  Destination Clock: cam_pclk rising
+
+  Data Path: frame_buff/write_addr_6 to frame_buff/write_addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            16   0.447   1.369  frame_buff/write_addr_6 (frame_buff/write_addr_6)
+     LUT6:I0->O            1   0.203   0.827  frame_buff/_n0125_inv12 (frame_buff/_n0125_inv11)
+     LUT6:I2->O            1   0.203   0.924  frame_buff/_n0125_inv14 (frame_buff/_n0125_inv13)
+     LUT6:I1->O           15   0.203   0.981  frame_buff/_n0125_inv15 (frame_buff/_n0125_inv)
+     FDCE:CE                   0.322          frame_buff/write_addr_0
+    ----------------------------------------
+    Total                      5.478ns (1.378ns logic, 4.100ns route)
+                                       (25.2% logic, 74.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_200khz'
+  Clock period: 7.207ns (frequency: 138.755MHz)
+  Total number of paths / destination ports: 4567 / 258
+-------------------------------------------------------------------------
+Delay:               7.207ns (Levels of Logic = 5)
+  Source:            index_6 (FF)
+  Destination:       index_0 (FF)
+  Source Clock:      clk_200khz rising
+  Destination Clock: clk_200khz rising
+
+  Data Path: index_6 to index_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   1.048  index_6 (index_6)
+     LUT6:I0->O            1   0.203   0.580  index[14]_PWR_4_o_LessThan_8_o_inv_inv21 (index[14]_PWR_4_o_LessThan_8_o_inv_inv2)
+     LUT6:I5->O            3   0.205   0.651  index[14]_PWR_4_o_LessThan_8_o_inv_inv22 (index[14]_PWR_4_o_LessThan_8_o_inv_inv21)
+     LUT5:I4->O           19   0.205   1.072  index[14]_PWR_4_o_LessThan_8_o_inv_inv23 (index[14]_PWR_4_o_LessThan_8_o_inv_inv)
+     LUT6:I5->O            1   0.205   0.580  _n016424 (_n01642)
+     LUT3:I2->O           38   0.205   1.376  _n01641 (s_t_rstpot)
+     FDRE:R                    0.430          index_0
+    ----------------------------------------
+    Total                      7.207ns (1.900ns logic, 5.307ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.552ns (frequency: 281.553MHz)
+  Total number of paths / destination ports: 90 / 16
+-------------------------------------------------------------------------
+Delay:               3.552ns (Levels of Logic = 2)
+  Source:            rst_toggle (FF)
+  Destination:       rst_toggle (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: rst_toggle to rst_toggle
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              40   0.447   1.770  rst_toggle (rst_toggle)
+     LUT6:I0->O            1   0.203   0.827  rst_toggle_glue_set (rst_toggle_glue_set)
+     LUT4:I0->O            1   0.203   0.000  rst_toggle_rstpot (rst_toggle_rstpot)
+     FD:D                      0.102          rst_toggle
+    ----------------------------------------
+    Total                      3.552ns (0.955ns logic, 2.597ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_25mhz'
+  Clock period: 8.949ns (frequency: 111.742MHz)
+  Total number of paths / destination ports: 7548 / 163
+-------------------------------------------------------------------------
+Delay:               8.949ns (Levels of Logic = 3)
+  Source:            vga_ctrl/v_count_8 (FF)
+  Destination:       frame_buff/Mram_frame_mem1 (RAM)
+  Source Clock:      clk_25mhz rising
+  Destination Clock: clk_25mhz rising
+
+  Data Path: vga_ctrl/v_count_8 to frame_buff/Mram_frame_mem1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            12   0.447   1.253  vga_ctrl/v_count_8 (vga_ctrl/v_count_8)
+     LUT5:I0->O            1   0.203   0.579  vga_ctrl/Mmux_n004371 (vga_ctrl/n0043<6>)
+     DSP48A1:A6->P11       1   4.560   0.580  vga_ctrl/Maddsub_n0059 (vga_ctrl/y_pos[6]_GND_15_o_add_20_OUT<11>)
+     LUT2:I1->O            7   0.205   0.773  vga_ctrl/Mmux_fb_addr31 (fb_addr<11>)
+     RAMB16BWER:ADDRB11        0.350          frame_buff/Mram_frame_mem1
+    ----------------------------------------
+    Total                      8.949ns (5.765ns logic, 3.184ns route)
+                                       (64.4% logic, 35.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_50mhz'
+  Clock period: 3.240ns (frequency: 308.632MHz)
+  Total number of paths / destination ports: 636 / 70
+-------------------------------------------------------------------------
+Delay:               3.240ns (Levels of Logic = 9)
+  Source:            camera_ctrl/reg_index_3 (FF)
+  Destination:       camera_ctrl/state_FSM_FFd3 (FF)
+  Source Clock:      clk_50mhz rising
+  Destination Clock: clk_50mhz rising
+
+  Data Path: camera_ctrl/reg_index_3 to camera_ctrl/state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.995  camera_ctrl/reg_index_3 (camera_ctrl/reg_index_3)
+     LUT5:I0->O            1   0.203   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_lut<0> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<0> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<1> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<2> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<3> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<4> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<5> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<5>)
+     MUXCY:CI->O           1   0.213   0.808  camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<6> (camera_ctrl/Mcompar_GND_8_o_reg_index[31]_LessThan_1_o_cy<6>)
+     LUT4:I1->O            1   0.205   0.000  camera_ctrl/state_FSM_FFd3-In1 (camera_ctrl/state_FSM_FFd3-In)
+     FDC:D                     0.102          camera_ctrl/state_FSM_FFd3
+    ----------------------------------------
+    Total                      3.240ns (1.437ns logic, 1.803ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4 / 3
+-------------------------------------------------------------------------
+Offset:              4.067ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       rst_toggle (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to rst_toggle
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            40   1.222   1.510  rst_IBUF (rst_IBUF)
+     LUT6:I4->O            1   0.203   0.827  rst_toggle_glue_set (rst_toggle_glue_set)
+     LUT4:I0->O            1   0.203   0.000  rst_toggle_rstpot (rst_toggle_rstpot)
+     FD:D                      0.102          rst_toggle
+    ----------------------------------------
+    Total                      4.067ns (1.730ns logic, 2.337ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cam_pclk'
+  Total number of paths / destination ports: 399 / 140
+-------------------------------------------------------------------------
+Offset:              6.503ns (Levels of Logic = 4)
+  Source:            cam_vsync (PAD)
+  Destination:       frame_buff/Mram_frame_mem11 (RAM)
+  Destination Clock: cam_pclk rising
+
+  Data Path: cam_vsync to frame_buff/Mram_frame_mem11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   1.222   1.662  cam_vsync_IBUF (cam_vsync_IBUF)
+     LUT3:I0->O            1   0.205   0.580  frame_buff/GND_14_o_x_counter[1]_MUX_193_o_0_02_SW0 (N4)
+     LUT6:I5->O            2   0.205   0.721  frame_buff/GND_14_o_x_counter[1]_MUX_193_o_0_02 (frame_buff/GND_14_o_x_counter[1]_MUX_193_o_0_0)
+     LUT2:I0->O           40   0.203   1.405  write_ctrl (write_ctrl)
+     RAMB16BWER:WEA2           0.300          frame_buff/Mram_frame_mem11
+    ----------------------------------------
+    Total                      6.503ns (2.135ns logic, 4.368ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_200khz'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.374ns (Levels of Logic = 2)
+  Source:            save (PAD)
+  Destination:       save_toggle (FF)
+  Destination Clock: clk_200khz rising
+
+  Data Path: save to save_toggle
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.845  save_IBUF (save_IBUF)
+     LUT4:I1->O            1   0.205   0.000  save_toggle_rstpot (save_toggle_rstpot)
+     FDR:D                     0.102          save_toggle
+    ----------------------------------------
+    Total                      2.374ns (1.529ns logic, 0.845ns route)
+                                       (64.4% logic, 35.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50mhz'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              3.057ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       camera_ctrl/reg_index_31 (FF)
+  Destination Clock: clk_50mhz rising
+
+  Data Path: rst to camera_ctrl/reg_index_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            40   1.222   1.405  rst_IBUF (rst_IBUF)
+     FDP:PRE                   0.430          camera_ctrl/sioc
+    ----------------------------------------
+    Total                      3.057ns (1.652ns logic, 1.405ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_25mhz'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            vga_ctrl/vga_r_2 (FF)
+  Destination:       vga_r<2> (PAD)
+  Source Clock:      clk_25mhz rising
+
+  Data Path: vga_ctrl/vga_r_2 to vga_r<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  vga_ctrl/vga_r_2 (vga_ctrl/vga_r_2)
+     OBUF:I->O                 2.571          vga_r_2_OBUF (vga_r<2>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_200khz'
+  Total number of paths / destination ports: 26 / 11
+-------------------------------------------------------------------------
+Offset:              7.766ns (Levels of Logic = 5)
+  Source:            index_6 (FF)
+  Destination:       o_bus_clk (PAD)
+  Source Clock:      clk_200khz rising
+
+  Data Path: index_6 to o_bus_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   1.048  index_6 (index_6)
+     LUT6:I0->O            1   0.203   0.580  index[14]_PWR_4_o_LessThan_8_o_inv_inv21 (index[14]_PWR_4_o_LessThan_8_o_inv_inv2)
+     LUT6:I5->O            3   0.205   0.651  index[14]_PWR_4_o_LessThan_8_o_inv_inv22 (index[14]_PWR_4_o_LessThan_8_o_inv_inv21)
+     LUT5:I4->O           19   0.205   1.072  index[14]_PWR_4_o_LessThan_8_o_inv_inv23 (index[14]_PWR_4_o_LessThan_8_o_inv_inv)
+     LUT3:I2->O            1   0.205   0.579  Mmux_o_bus_clk11 (o_bus_clk_OBUF)
+     OBUF:I->O                 2.571          o_bus_clk_OBUF (o_bus_clk)
+    ----------------------------------------
+    Total                      7.766ns (3.836ns logic, 3.930ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_50mhz'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              4.382ns (Levels of Logic = 2)
+  Source:            camera_ctrl/state[2]_clk_DFF_98 (FF)
+  Destination:       cam_siod (PAD)
+  Source Clock:      clk_50mhz rising
+
+  Data Path: camera_ctrl/state[2]_clk_DFF_98 to cam_siod
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.579  camera_ctrl/state[2]_clk_DFF_98 (camera_ctrl/state[2]_clk_DFF_98)
+     INV:I->O              1   0.206   0.579  camera_ctrl/state[2]_clk_DFF_98_inv1_INV_0 (camera_ctrl/state[2]_clk_DFF_98_inv)
+     OBUFT:T->O                2.571          cam_siod_OBUFT (cam_siod)
+    ----------------------------------------
+    Total                      4.382ns (3.224ns logic, 1.158ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.647ns (Levels of Logic = 2)
+  Source:            clk_200khz (FF)
+  Destination:       o_bus_clk (PAD)
+  Source Clock:      clk rising
+
+  Data Path: clk_200khz to o_bus_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.845  clk_200khz (clk_200khz)
+     LUT3:I0->O            1   0.205   0.579  Mmux_o_bus_clk11 (o_bus_clk_OBUF)
+     OBUF:I->O                 2.571          o_bus_clk_OBUF (o_bus_clk)
+    ----------------------------------------
+    Total                      4.647ns (3.223ns logic, 1.424ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               2.130ns (Levels of Logic = 1)
+  Source:            clk (PAD)
+  Destination:       clk_gen/XLXI_1:CLKIN (PAD)
+
+  Data Path: clk to clk_gen/XLXI_1:CLKIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFG:I->O           12   1.222   0.908  clk_IBUFG (clk_IBUFG)
+    DCM_CLKGEN:CLKIN           0.000          clk_gen/XLXI_1
+    ----------------------------------------
+    Total                      2.130ns (1.222ns logic, 0.908ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock cam_pclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cam_pclk       |    5.478|         |         |         |
+clk            |    5.472|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.552|         |         |         |
+clk_200khz     |    3.202|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_200khz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.405|         |         |         |
+clk_200khz     |    7.207|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_25mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_25mhz      |    8.949|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_50mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50mhz      |    3.240|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.58 secs
+ 
+--> 
+
+
+Total memory usage is 624060 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

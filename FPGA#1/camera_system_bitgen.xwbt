@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/iqnaja/project/pro7/camera_system.ncd
+OUTFILE=/home/iqnaja/project/pro7/camera_system.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/iqnaja/project/pro7
+LICENSE=WebPack
+USER_INFO=213118872_0_0_619

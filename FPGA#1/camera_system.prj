@@ -1,0 +1,5 @@
+vhdl work "vga.vhd"
+vhdl work "ClockAdjust.vhdl"
+vhdl work "camera.vhd"
+vhdl work "buff.vhd"
+vhdl work "top.vhd"
