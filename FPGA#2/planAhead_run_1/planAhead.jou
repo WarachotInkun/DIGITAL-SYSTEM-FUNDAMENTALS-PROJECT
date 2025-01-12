@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Nov 10 16:23:30 2024
+# Process ID: 4048
+# Log file: /home/ise/communicate/planAhead_run_1/planAhead.log
+# Journal file: /home/ise/communicate/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/communicate/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P46 [get_ports reset]
+endgroup
+set_property package_pin "" [get_ports [list  busy]]
+startgroup
+set_property package_pin P82 [get_ports busy]
+endgroup
+save_constraints
