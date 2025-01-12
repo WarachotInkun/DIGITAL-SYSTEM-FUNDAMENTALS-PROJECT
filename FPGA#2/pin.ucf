@@ -1,0 +1,36 @@
+# กำหนดขา Clock
+NET "clk" LOC = P123;
+NET "reset" LOC = P45; 
+
+
+NET "data_out(0)" LOC = P124;
+NET "data_out(1)" LOC = P127;
+NET "data_out(2)" LOC = P132;
+NET "data_out(3)" LOC = P134;
+NET "data_out(4)" LOC = P138;
+NET "data_out(5)" LOC = P140;
+NET "data_out(6)" LOC = P142;
+NET "data_out(7)" LOC = P1;
+
+NET "sclk" LOC = P126;
+
+
+NET "led" LOC = P82;
+
+NET "tik_cmd" LOC = P67;
+NET "write_cmd_to_arduino" LOC = P131;
+
+
+NET "i_bus(7)" LOC = P99;
+NET "i_bus(6)" LOC = P100;
+NET "i_bus(5)" LOC = P101;
+NET "i_bus(4)" LOC = P102;
+NET "i_bus(3)" LOC = P104;
+NET "i_bus(2)" LOC = P105;
+NET "i_bus(1)" LOC = P111;
+NET "i_bus(0)" LOC = P112;
+
+NET "i_clk" LOC = P114;
+NET "write_cmd" LOC = P115;
+
+NET "i_clk" CLOCK_DEDICATED_ROUTE = FALSE;

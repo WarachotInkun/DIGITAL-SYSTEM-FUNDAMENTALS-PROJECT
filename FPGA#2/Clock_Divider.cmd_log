@@ -1,0 +1,5 @@
+vhdtdtfi -lib work clkdivider.vhd -prj communicate -o Clock_Divider.spl -module Clock_Divider -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Clock_Divider.spl /home/ise/communicate/Clock_Divider.sym 
+vhdtdtfi -prj communicate -o /home/ise/communicate/Clock_Divider.tfi -module Clock_Divider -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work clkdivider.vhd 
+vhdtdtfi -lib work clkdivider.vhd -prj communicate -o Clock_Divider.spl -module Clock_Divider -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Clock_Divider.spl /home/ise/communicate/Clock_Divider.sym 

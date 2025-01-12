@@ -1,0 +1,2 @@
+vhdtdtfi -lib work handshake.vhd -prj communicate -o Handshake_FPGA.spl -module Handshake_FPGA -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Handshake_FPGA.spl /home/ise/communicate/Handshake_FPGA.sym 

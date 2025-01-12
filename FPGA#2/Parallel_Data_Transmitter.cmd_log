@@ -1,0 +1,24 @@
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/communicate/Parallel_Data_Transmitter.sym 
+vhdtdtfi -lib work bram.vhd -lib work testData.vhd -prj communicate -o Parallel_Data_Transmitter.spl -module Parallel_Data_Transmitter -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Parallel_Data_Transmitter.spl /home/ise/share_with_vm_digital/communicate_ink/communicate/Parallel_Data_Transmitter.sym 

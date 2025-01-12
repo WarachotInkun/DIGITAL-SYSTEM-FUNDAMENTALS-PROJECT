@@ -1,0 +1,7 @@
+[Inputs]
+clk
+send_button
+=data_in[7:0]=
+[Outputs]
+=data_out[7:0]=
+[BiDir]

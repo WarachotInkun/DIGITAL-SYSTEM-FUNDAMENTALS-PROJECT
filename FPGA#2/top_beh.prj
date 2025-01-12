@@ -1,0 +1,4 @@
+vhdl work "testData.vhd"
+vhdl work "clkdivider.vhd"
+verilog work "top.vf"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

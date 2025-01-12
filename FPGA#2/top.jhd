@@ -1,0 +1,7 @@
+MODULE top
+	SUBMODULE Clock_Divider
+		INSTANCE XLXI_25
+	SUBMODULE Delay_Rising_Edge
+		INSTANCE XLXI_33
+	SUBMODULE Parallel_Data_Transmitter
+		INSTANCE XLXI_39

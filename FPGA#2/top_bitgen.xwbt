@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/share_with_vm_digital/communicate_ink/communicate/top.ncd
+OUTFILE=/home/ise/share_with_vm_digital/communicate_ink/communicate/top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/ise/share_with_vm_digital/communicate_ink/communicate
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

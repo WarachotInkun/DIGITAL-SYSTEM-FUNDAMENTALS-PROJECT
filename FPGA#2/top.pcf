@@ -1,0 +1,33 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 12 11:49:33 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "i_bus<5>" LOCATE = SITE "P101" LEVEL 1;
+COMP "i_bus<6>" LOCATE = SITE "P100" LEVEL 1;
+COMP "i_bus<7>" LOCATE = SITE "P99" LEVEL 1;
+COMP "clk" LOCATE = SITE "P123" LEVEL 1;
+COMP "sclk" LOCATE = SITE "P126" LEVEL 1;
+COMP "led" LOCATE = SITE "P82" LEVEL 1;
+COMP "i_clk" LOCATE = SITE "P114" LEVEL 1;
+PIN i_clk_pin<0> = BEL "i_clk" PINNAME PAD;
+PIN "i_clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "tik_cmd" LOCATE = SITE "P67" LEVEL 1;
+COMP "write_cmd_to_arduino" LOCATE = SITE "P131" LEVEL 1;
+COMP "data_out<0>" LOCATE = SITE "P124" LEVEL 1;
+COMP "data_out<1>" LOCATE = SITE "P127" LEVEL 1;
+COMP "data_out<2>" LOCATE = SITE "P132" LEVEL 1;
+COMP "data_out<3>" LOCATE = SITE "P134" LEVEL 1;
+COMP "data_out<4>" LOCATE = SITE "P138" LEVEL 1;
+COMP "data_out<5>" LOCATE = SITE "P140" LEVEL 1;
+COMP "data_out<6>" LOCATE = SITE "P142" LEVEL 1;
+COMP "data_out<7>" LOCATE = SITE "P1" LEVEL 1;
+COMP "reset" LOCATE = SITE "P45" LEVEL 1;
+COMP "i_bus<0>" LOCATE = SITE "P112" LEVEL 1;
+COMP "i_bus<1>" LOCATE = SITE "P111" LEVEL 1;
+COMP "i_bus<2>" LOCATE = SITE "P105" LEVEL 1;
+COMP "i_bus<3>" LOCATE = SITE "P104" LEVEL 1;
+COMP "write_cmd" LOCATE = SITE "P115" LEVEL 1;
+COMP "i_bus<4>" LOCATE = SITE "P102" LEVEL 1;
+SCHEMATIC END;
+

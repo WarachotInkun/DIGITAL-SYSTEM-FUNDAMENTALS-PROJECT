@@ -1,0 +1,29 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/communicate/top_isim_beh.exe -prj /home/ise/communicate/top_beh.prj work.top work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/communicate/top.vf" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "/home/ise/communicate/testData.vhd" into library work
+Parsing VHDL file "/home/ise/communicate/clkdivider.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 96864 KB
+Fuse CPU Usage: 900 ms
+Compiling module BUF
+Compiling module AND2
+Compiling module top
+Compiling module glbl
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity Parallel_Data_Transmitter [parallel_data_transmitter_defaul...]
+Compiling architecture behavioral of entity Clock_Divider [clock_divider_default]
+Time Resolution for simulation is 1ps.
+Compiled 7 VHDL Units
+Compiled 4 Verilog Units
+Built simulation executable /home/ise/communicate/top_isim_beh.exe
+Fuse Memory Usage: 114120 KB
+Fuse CPU Usage: 980 ms
+GCC CPU Usage: 990 ms

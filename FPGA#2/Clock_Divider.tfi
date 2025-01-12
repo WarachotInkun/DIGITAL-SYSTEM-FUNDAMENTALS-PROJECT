@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+Clock_Divider instance_name (
+    .i_Clk(i_Clk), 
+    .o_Clk_Div(o_Clk_Div)
+    );
+
+

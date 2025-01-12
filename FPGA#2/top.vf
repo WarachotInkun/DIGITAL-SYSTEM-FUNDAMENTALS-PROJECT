@@ -1,0 +1,72 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : top.vf
+// /___/   /\     Timestamp : 11/12/2024 04:54:44
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/ise/share_with_vm_digital/communicate_ink/communicate/top.vf -w /home/ise/share_with_vm_digital/communicate_ink/communicate/top.sch
+//Design Name: top
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module top(clk, 
+           i_bus, 
+           i_clk, 
+           reset, 
+           write_cmd, 
+           data_out, 
+           led, 
+           sclk, 
+           tik_cmd, 
+           write_cmd_to_arduino);
+
+    input clk;
+    input [7:0] i_bus;
+    input i_clk;
+    input reset;
+    input write_cmd;
+   output [7:0] data_out;
+   output led;
+   output sclk;
+   output tik_cmd;
+   output write_cmd_to_arduino;
+   
+   wire asdasd;
+   wire ikljhfluiysdliy;
+   wire tig;
+   wire led_DUMMY;
+   
+   assign led = led_DUMMY;
+   BUF  XLXI_24 (.I(asdasd), 
+                .O(ikljhfluiysdliy));
+   Clock_Divider  XLXI_25 (.i_Clk(clk), 
+                          .o_Clk_Div(asdasd));
+   AND2  XLXI_29 (.I0(ikljhfluiysdliy), 
+                 .I1(led_DUMMY), 
+                 .O(sclk));
+   BUF  XLXI_31 (.I(write_cmd), 
+                .O(write_cmd_to_arduino));
+   BUF  XLXI_32 (.I(tig), 
+                .O(tik_cmd));
+   Delay_Rising_Edge  XLXI_33 (.clk(clk), 
+                              .signal_in(write_cmd), 
+                              .signal_out(tig));
+   Parallel_Data_Transmitter  XLXI_39 (.clk(asdasd), 
+                                      .i_bus(i_bus[7:0]), 
+                                      .i_clk_bus(i_clk), 
+                                      .i_tig(tig), 
+                                      .reset(reset), 
+                                      .data_out(data_out[7:0]), 
+                                      .o_en(led_DUMMY));
+endmodule

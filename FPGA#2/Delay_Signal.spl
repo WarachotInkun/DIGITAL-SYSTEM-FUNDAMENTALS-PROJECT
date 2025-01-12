@@ -1,0 +1,6 @@
+[Inputs]
+clk
+signal_in
+[Outputs]
+signal_out
+[BiDir]

@@ -1,0 +1,1 @@
+vhdtdtfi -prj communicate -o testData.spl -module testData -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 

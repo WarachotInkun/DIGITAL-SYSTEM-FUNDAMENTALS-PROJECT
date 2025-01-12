@@ -1,0 +1,10 @@
+[Inputs]
+clk
+reset
+i_tig
+i_clk_bus
+=i_bus[7:0]=
+[Outputs]
+o_en
+=data_out[7:0]=
+[BiDir]

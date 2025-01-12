@@ -1,0 +1,5 @@
+[Inputs]
+i_Clk
+[Outputs]
+o_Clk_Delayed
+[BiDir]

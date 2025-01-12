@@ -1,0 +1,7 @@
+[Inputs]
+i_Clk
+i_Reset
+[Outputs]
+r_Data_Valid
+=o_Data_Out[7:0]=
+[BiDir]

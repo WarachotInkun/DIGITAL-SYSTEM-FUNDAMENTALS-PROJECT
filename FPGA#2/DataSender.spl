@@ -1,0 +1,8 @@
+[Inputs]
+CLK
+RESET
+REQUEST_PIN
+[Outputs]
+VALID_PIN
+=DATA_OUT[7:0]=
+[BiDir]

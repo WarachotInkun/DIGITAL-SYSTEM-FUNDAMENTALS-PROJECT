@@ -1,0 +1,10 @@
+[Inputs]
+i_trig
+i_Clk
+i_Reset
+i_Ready
+[Outputs]
+o_Data_Valid
+o_en
+=o_Data_Out[7:0]=
+[BiDir]

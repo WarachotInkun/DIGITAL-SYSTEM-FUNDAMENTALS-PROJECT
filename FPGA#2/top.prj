@@ -1,0 +1,5 @@
+vhdl work "bram.vhd"
+vhdl work "wait_for_2sec.vhd"
+vhdl work "testData.vhd"
+vhdl work "clkdivider.vhd"
+verilog work "top.vf"
