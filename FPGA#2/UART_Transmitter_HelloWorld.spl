@@ -1,0 +1,7 @@
+[Inputs]
+clk
+reset
+[Outputs]
+tx
+tx_busy
+[BiDir]

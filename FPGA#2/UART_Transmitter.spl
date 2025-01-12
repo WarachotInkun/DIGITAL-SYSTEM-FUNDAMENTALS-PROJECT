@@ -1,0 +1,9 @@
+[Inputs]
+clk
+reset
+tx_start
+=data_in[7:0]=
+[Outputs]
+tx
+tx_busy
+[BiDir]
